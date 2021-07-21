@@ -9,7 +9,7 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("http://localhost:9999/forms.html")
 
 nowutc = datetime.now(timezone.utc)
-print(nowutc)
+
 time.sleep(1)  # Csak hogy lássuk, mi történik
 driver.find_element_by_id('example-input-date').send_keys(nowutc.strftime("00%Y/%m/%d"))
 time.sleep(1)
